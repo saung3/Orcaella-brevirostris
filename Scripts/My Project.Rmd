@@ -1,0 +1,119 @@
+---
+title: "Phylogeny tree"
+author: "Sett Aung"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r load-packages, message=FALSE}
+library(tidyverse)
+library(openintro)
+```
+
+```{r}
+# Importing my data_set for phylogeny which includes cetacea DQB and my DQB alleles
+dna1 <- adegenet::fasta2DNAbin(file="Cetacea_DQB_alignment 2024.fasta")
+dna1
+```
+
+```{r}
+# calculating pairwise distances
+Cetacea_D <- dist.dna(dna1, model = "TN93")
+length(Cetacea_D)
+
+```
+
+```{r}
+# Putting the data into data frame
+D_df <- as.data.frame(as.matrix(Cetacea_D))
+# Constructing a heat map
+table.paint(D_df, cleg=0, clabel.row=.5, clabel.col=.5) 
+```
+```{r}
+# Generating a nj tree from our distance matrix
+tree <- nj(Cetacea_D)
+tree
+class(tree) 
+
+```
+
+```{r}
+# Ladderizing
+tree <- ladderize(tree, right = F)
+```
+
+```{r}
+# Plot a simple NJ Tree
+plot(tree, cex = 0.6)
+title("A Simple NJ Tree")
+```
+
+```{r}
+h_cluster <- hclust(Cetacea_D, method = "average", members = NULL)
+plot(h_cluster, cex = 0.6)
+
+```
+
+```{r}
+my_Tree <- "output.contree_nexus.nex"
+ape::read.nexus(my_Tree)
+```
+
+```{r}
+ggtree(my_Tree)
+```
+
+## Maximum Likelihood based models
+
+```{r}
+tree.ini <- nj(dist.dna(dna1,model = "TN93"))
+```
+
+```{r}
+dna2 <- as.phyDat(dna1) 
+class(dna2) 
+dna2
+```
+
+```{r}
+pml(tree.ini, dna2, k = 4)
+```
+
+```{r}
+table(as.character(dna2))
+```
+
+```{r}
+na.posi <- which(apply(as.character(dna1),2, function(e) any(!e %in% c("a","t","g","c"))))
+```
+
+```{r}
+temp <- apply(as.character(dna1),2, function(e) sum(!e %in% c("a","t","g","c")))
+plot(temp, type = "l", col = "blue", xlab = "Position in HA segment", ylab = "Number of NAs")
+```
+
+```{r}
+dna3 <- dna1[,-na.posi]
+```
+
+```{r}
+table(as.character(dna3))
+```
+
+```{r}
+dna4 <- as.phyDat(dna3)
+```
+
+```{r}
+tre.ini <- nj(dist.dna(dna3,model="TN93"))
+fit.ini <- pml(tre.ini, dna4, k=4)
+fit.ini
+```
+
+```{r}
+fit <- optim.pml(fit.ini, optNni=TRUE, optBf=TRUE, optQ=TRUE, optGamma=TRUE)
+fit
+
+```
