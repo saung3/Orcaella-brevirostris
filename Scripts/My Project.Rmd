@@ -10,33 +10,12 @@ output:
 ```{r load-packages, message=FALSE}
 library(tidyverse)
 library(openintro)
+library(ggtree)
+library(ape)
 ```
 
 ```{r}
-# Importing my data_set for phylogeny which includes cetacea DQB and my DQB alleles
-dna1 <- adegenet::fasta2DNAbin(file="Cetacea_DQB_alignment 2024.fasta")
-dna1
-```
-
-```{r}
-# calculating pairwise distances
-Cetacea_D <- dist.dna(dna1, model = "TN93")
-length(Cetacea_D)
-
-```
-
-```{r}
-# Putting the data into data frame
-D_df <- as.data.frame(as.matrix(Cetacea_D))
-# Constructing a heat map
-table.paint(D_df, cleg=0, clabel.row=.5, clabel.col=.5) 
-```
-```{r}
-# Generating a nj tree from our distance matrix
-tree <- nj(Cetacea_D)
-tree
-class(tree) 
-
+tree <- read.tree("../Data/output.bionj")
 ```
 
 ```{r}
@@ -45,75 +24,45 @@ tree <- ladderize(tree, right = F)
 ```
 
 ```{r}
-# Plot a simple NJ Tree
-plot(tree, cex = 0.6)
-title("A Simple NJ Tree")
+# Importing tree from CIPRES using IQ Tool
+tree_1 <- ggtree(tree) +
+  geom_tiplab(size = 1) 
+
+tree_1
 ```
 
 ```{r}
-h_cluster <- hclust(Cetacea_D, method = "average", members = NULL)
-plot(h_cluster, cex = 0.6)
-
+# reading contree output from CIPRES
+tree2 <- read.tree("../Data/output.contree")
 ```
 
 ```{r}
-my_Tree <- "output.contree_nexus.nex"
-ape::read.nexus(my_Tree)
+# Ladderizing
+tree2 <- ladderize(tree2, right = F)
 ```
 
 ```{r}
-ggtree(my_Tree)
-```
+# Importing contree from CIPRES using IQ Tool
+tree_3 <- ggtree(tree2) +
+  geom_tiplab(size = 1) 
 
-## Maximum Likelihood based models
-
-```{r}
-tree.ini <- nj(dist.dna(dna1,model = "TN93"))
-```
-
-```{r}
-dna2 <- as.phyDat(dna1) 
-class(dna2) 
-dna2
+tree_3
 ```
 
 ```{r}
-pml(tree.ini, dna2, k = 4)
+# reading treefile output from CIPRES
+tree4 <- read.tree("../Data/output.treefile")
 ```
 
 ```{r}
-table(as.character(dna2))
+# Ladderizing
+tree4 <- ladderize(tree4, right = F)
 ```
 
 ```{r}
-na.posi <- which(apply(as.character(dna1),2, function(e) any(!e %in% c("a","t","g","c"))))
-```
+# Importing contree from CIPRES using IQ Tool
+tree_5 <- ggtree(tree4) +
+  geom_tiplab(size = 1) 
 
-```{r}
-temp <- apply(as.character(dna1),2, function(e) sum(!e %in% c("a","t","g","c")))
-plot(temp, type = "l", col = "blue", xlab = "Position in HA segment", ylab = "Number of NAs")
-```
-
-```{r}
-dna3 <- dna1[,-na.posi]
-```
-
-```{r}
-table(as.character(dna3))
-```
-
-```{r}
-dna4 <- as.phyDat(dna3)
-```
-
-```{r}
-tre.ini <- nj(dist.dna(dna3,model="TN93"))
-fit.ini <- pml(tre.ini, dna4, k=4)
-fit.ini
-```
-
-```{r}
-fit <- optim.pml(fit.ini, optNni=TRUE, optBf=TRUE, optQ=TRUE, optGamma=TRUE)
-fit
-
+tree_5
 ```
