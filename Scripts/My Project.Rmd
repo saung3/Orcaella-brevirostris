@@ -50,7 +50,8 @@ tree2 <- ladderize(tree2, right = F)
 tree_3 <- ggtree(tree2, branch.length='none', layout='circular') +
   geom_tiplab(size = 1) +
   ggtitle("Bootstrap tree - Comparing DQB Alleles of Irrawaddy dolphins to DQB 
-  Alleles of cetaceans")
+                                       Alleles of cetaceans") +
+  geom_treescale()
 
 tree_3
 ```
