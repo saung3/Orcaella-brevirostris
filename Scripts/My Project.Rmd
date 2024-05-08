@@ -19,14 +19,18 @@ tree <- read.tree("../Data/output.bionj")
 ```
 
 ```{r}
-# Ladderizing
+# Ladderizing the tree (Neighborjoining tree)
 tree <- ladderize(tree, right = F)
 ```
 
 ```{r}
-# Importing tree from CIPRES using IQ Tool
-tree_1 <- ggtree(tree) +
-  geom_tiplab(size = 1) 
+# Importing NJ tree from CIPRES using IQ Tool
+tree_1 <- ggtree(tree, branch.length='none', layout='circular') +
+  geom_tiplab(size = 1) +
+  ggtitle(
+  "Neighbor-joining tree - 
+Comparing DQB Alleles of Irrawaddy dolphins 
+to DQB Alleles of cetaceans ")
 
 tree_1
 ```
@@ -43,8 +47,10 @@ tree2 <- ladderize(tree2, right = F)
 
 ```{r}
 # Importing contree from CIPRES using IQ Tool
-tree_3 <- ggtree(tree2) +
-  geom_tiplab(size = 1) 
+tree_3 <- ggtree(tree2, branch.length='none', layout='circular') +
+  geom_tiplab(size = 1) +
+  ggtitle("Bootstrap tree - Comparing DQB Alleles of Irrawaddy dolphins to DQB 
+  Alleles of cetaceans")
 
 tree_3
 ```
@@ -61,7 +67,7 @@ tree4 <- ladderize(tree4, right = F)
 
 ```{r}
 # Importing contree from CIPRES using IQ Tool
-tree_5 <- ggtree(tree4) +
+tree_5 <- ggtree(tree4, branch.length='none', layout='circular') +
   geom_tiplab(size = 1) 
 
 tree_5
