@@ -28,9 +28,8 @@ tree <- ladderize(tree, right = F)
 tree_1 <- ggtree(tree, branch.length='none', layout='circular') +
   geom_tiplab(size = 1) +
   ggtitle(
-  "Neighbor-joining tree - 
-Comparing DQB Alleles of Irrawaddy dolphins 
-to DQB Alleles of cetaceans ")
+"Neighbor-joining tree - Comparing DQB Alleles of Irrawaddy 
+                dolphins to DQB Alleles of cetaceans ")
 
 tree_1
 ```
@@ -49,15 +48,15 @@ tree2 <- ladderize(tree2, right = F)
 # Importing contree from CIPRES using IQ Tool
 tree_3 <- ggtree(tree2, branch.length='none', layout='circular') +
   geom_tiplab(size = 1) +
-  ggtitle("Bootstrap tree - Comparing DQB Alleles of Irrawaddy dolphins to DQB 
-                                       Alleles of cetaceans") +
+  ggtitle("Bootstrap tree - Comparing DQB Alleles of Irrawaddy dolphins to 
+                       DQB Alleles of cetaceans") +
   geom_treescale()
 
 tree_3
 ```
 
 ```{r}
-# reading treefile output from CIPRES
+# reading ML treefile output from CIPRES
 tree4 <- read.tree("../Data/output.treefile")
 ```
 
@@ -67,9 +66,12 @@ tree4 <- ladderize(tree4, right = F)
 ```
 
 ```{r}
-# Importing contree from CIPRES using IQ Tool
+# Importing ML tree from CIPRES using IQ Tool
 tree_5 <- ggtree(tree4, branch.length='none', layout='circular') +
-  geom_tiplab(size = 1) 
+  geom_tiplab(size = 1) +
+  ggtitle("Maximum Likelihood tree - Comparing DQB Alleles of Irrawaddy 
+                    dolphins to DQB Alleles of cetaceans") +
+  geom_treescale()
 
 tree_5
 ```
