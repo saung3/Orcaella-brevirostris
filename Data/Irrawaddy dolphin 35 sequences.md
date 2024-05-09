@@ -1,5 +1,5 @@
 ## Summary 
-**Dataset title:** Cetacea MHCIIDQB Alleles
+**Dataset title:** Irrawaddy dolphin 35 sequences
 
 ## Curators
 **Dataset curators:** Michael McGownen, Department of Vertebrate Zoology, Smithsonian National Museum of Natural History 
@@ -15,13 +15,13 @@
 - Kelly Robertson: Southwest Fisheries Science Center, National Oceanic and Atmospheric Administration, La Jolla, California, USA
 
 ## Dataset Summary
-This dataset compromises of Irrawaddy dolphin Sequences (n=35) with base pair length of 268bp. These sequences were chosen because of good reads and consensus identity from 77 sequences. These sequences have been cleaned to display only exon 2 of the DQB locus. 
+This dataset compromises of Irrawaddy dolphin Sequences (n=35) with base pair length of 268bp. These sequences were chosen because of good reads and consensus identity from 77 sequences. These sequences have been cleaned to display whole exon 2 of the DQB locus. 
 
 ## Data Format 
 All the data are DNA sequences in standard FASTA files. 
 
 ## Curation Rationale
-This dataset was created to combine all the MHCIIDQB Alleles in one standard FASTA file for easier application on IQ tree tool of CIPRES. There has been a lack of information to determine the evolutionary aspect of the MHCIIDQB gene among cetaceans. Past studies have hypothesized the maintenance of functional MHC genes across cetaceans. Comparing MHCIIDQB gene with all the other cetaceans using a phylogeny will give a visual model on how DQB alleles evolve and diverge over time.
+Previous research has found only one version of DQB allele using just one individual (Hayashi et al. 2003). Using a larger sample size increases the likelihood of detecting more MHCIIDQB alleles that has not been detected in a smaller sample size. Investigating multiple populations across the habitat range aids in assessing the difference in genetic variation between populations. More importantly, the findings will hint the immune health of the Irrawaddy dolphin across its subpopulation.
 
 ## Irrawaddy dolphin exon 2 DQB sequences. (n=35)
 Malaysia_1
@@ -129,3 +129,6 @@ GATTTCTTGTACCGTCATATGGGCATGTGTTACTTCACCAACGGCACGGAGCGGGTGCGGCTCGTGGACAGATACATCTA
 UCMZC.91.A_Sarawak_A2
 GATTTCTTGTACCGTCATATGGGCATGTGTTACTTCACCAACGGCACGGAGCGGGTGCGGCTCGTGGACAGATACATCTATAATCGGGAGGAGTACGTGCGCTTCGACAGCGACGTGGGCGAGTTCCGGGCGGTGACCGAGCTGGGCCGGCCGGACGCCGAGTACTGGAACAGCCAGGAGGACATCCTGGAGGAGGAACGGGCCGCGCTGGACACGGTGTGCAGACACAACTACAGGATTTTTGAGACCTTCACGGTGCAGCGGCGAG
 
+## Data Collection 
+These data were collected by many research groups including locals from Thailand, postdoctoral researchers,graduate students are were also collected from several museums including the Department of Marine and Coastal Resources (DMCR) in Klaeng, Rayong , Thailand (n=11), the MareCet Research Organization (MereCet) in Selangor, Malaysia (n=2). We also obtained tissue sample from various sources including the Southwest Fisheries Science Center’s (SWFSC) Marine Mammal and Turtle Molecular Research Tissue Sample Collection (MMASTR) in La Jolla, CA, USA (n=29), the DMCR (n=11), and the MareCet (n=6). Since the species is under the risk of extinction, we obtained historic samples originally collected between 1875-1972 which are the osteological samples (n=16) and bone samples from Orcaella hinshohn (n=2) stored in eight
+museum collections in the United States and Europe. Unfortunately, we were not able to obtain modern samples in regions such as Sumatra (Indonesia), Ayeyarwaddy River (Myanmar), Chilika Lake (India), and the northern coast of Borneo.
