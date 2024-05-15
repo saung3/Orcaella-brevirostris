@@ -39,6 +39,7 @@ Alternative hypothesis: There is a relationship between the MHCIIDQB Alleles of 
 
 Methods: To analyze the relationship of the DQB alleles with few other cetaceans, we will compile sequences from GenBank and align them to the DQB alleles from Irrawaddy dolphin and construct a phylogenetic tree using R and R studio. The data from this approach will help us visualize which group of cetaceans has high similarity with the DQB alleles of Irrawaddy dolphins. This information can clarify more about the maintenance of high variability of MHC genes over time. 
 
+## Using ggtree
 ```{r}
 tree <- read.tree("../Data/output.bionj")
 ```
@@ -59,6 +60,7 @@ tree_1 <- ggtree(tree, branch.length='none', layout='circular') +
 tree_1
 ```
 
+## Using ggtree
 ```{r}
 # reading contree output from CIPRES
 tree2 <- read.tree("../Data/output.contree")
@@ -81,6 +83,7 @@ tree_2 <- ggtree(tree2, branch.length='none', layout='circular') +
 tree_2
 ```
 
+## Using ggtree
 ```{r}
 # reading ML treefile output from CIPRES
 tree3 <- read.tree("../Data/output.treefile")
@@ -102,6 +105,29 @@ tree_3 <- ggtree(tree3, branch.length='none', layout='circular') +
 
 tree_3
 ```
+
+## Using ape
+```{r}
+# Load the 'ape' package 
+library(ape)
+tree2 <- read.tree("../Data/output.contree")
+# Ladderizing
+tree2 <- ladderize(tree2, right = FALSE)
+
+
+# Define the labels you want to highlight
+highlight_labels <- c("Obre_Allele1", "Obre_Allele2", "Obre_Allele3", "Obre_Allele4", "AB164223_Obre")
+
+# Plot the tree with highlighted labels
+plot(tree, tip.color = ifelse(tree$tip.label %in% highlight_labels, "red", "black"), cex = 0.3, 
+     type = 'fan')
+
+```
+```{r}
+
+```
+
+
 
 
 
