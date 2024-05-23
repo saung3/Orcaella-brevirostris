@@ -58,6 +58,25 @@ tree_1 <- ggtree(tree, branch.length='none', layout='circular') +
 tree_1
 ```
 
+```{r}
+library(ggtree)
+library(ape)
+library(ggplot2)
+
+# Assuming tree2 is your phylogenetic tree
+
+# Convert the tree to a ggtree object with circular layout and no branch lengths
+tree_gg_1 <- ggtree(tree, branch.length='none', layout='circular')
+
+# Plot the tree with colored tip labels for specified groups
+tree_gg_1 +
+  geom_tiplab(size = 0.7, aes(color = ifelse(label %in% c("Obre_Allele1", "Obre_Allele2", "Obre_Allele3", "Obre_Allele4", "AB164223_Obre"), label, NA))) +
+  scale_color_manual(values = c("red", "blue", "green", "purple", "orange"), na.value = "black") +
+  ggtitle("NJ tree") +
+  geom_treescale()
+
+```
+
 ## Using ggtree
 ```{r}
 # reading contree output from CIPRES
@@ -79,6 +98,25 @@ tree_2 <- ggtree(tree2, branch.length='none', layout='circular') +
   geom_treescale() 
   
 tree_2
+```
+
+```{r}
+library(ggtree)
+library(ape)
+library(ggplot2)
+
+# Assuming tree2 is your phylogenetic tree
+
+# Convert the tree to a ggtree object with circular layout and no branch lengths
+tree_gg_2 <- ggtree(tree2, branch.length='none', layout='circular')
+
+# Plot the tree with colored tip labels for specified groups
+tree_gg_2 +
+  geom_tiplab(size = 0.7, aes(color = ifelse(label %in% c("Obre_Allele1", "Obre_Allele2", "Obre_Allele3", "Obre_Allele4", "AB164223_Obre"), label, NA))) +
+  scale_color_manual(values = c("red", "blue", "green", "purple", "orange"), na.value = "black") +
+  ggtitle("Bootstrap tree") +
+  geom_treescale()
+
 ```
 
 ## Using ggtree
@@ -104,6 +142,25 @@ tree_3 <- ggtree(tree3, branch.length='none', layout='circular') +
 tree_3
 ```
 
+```{r}
+library(ggtree)
+library(ape)
+library(ggplot2)
+
+# Assuming tree2 is your phylogenetic tree
+
+# Convert the tree to a ggtree object with circular layout and no branch lengths
+tree_gg_3 <- ggtree(tree3, branch.length='none', layout='circular')
+
+# Plot the tree with colored tip labels for specified groups
+tree_gg_3 +
+  geom_tiplab(size = 0.7, aes(color = ifelse(label %in% c("Obre_Allele1", "Obre_Allele2", "Obre_Allele3", "Obre_Allele4", "AB164223_Obre"), label,NA))) +
+  scale_color_manual(values = c("red", "blue", "green", "purple", "orange"), na.value = "black") +
+  ggtitle("Maximum Likelihood tree") +
+  geom_treescale()
+```
+
+
 ## Using ape package
 ```{r}
 # Load the 'ape' package 
@@ -119,9 +176,6 @@ highlight_labels <- c("Obre_Allele1", "Obre_Allele2", "Obre_Allele3", "Obre_Alle
 # Plot the tree with highlighted labels
 plot(tree, tip.color = ifelse(tree$tip.label %in% highlight_labels, "red", "black"), cex = 0.3, 
      type = 'fan')
-
-```
-```{r}
 
 ```
 
