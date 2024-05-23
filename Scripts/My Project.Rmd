@@ -71,13 +71,13 @@ tree2 <- ladderize(tree2, right = F)
 
 ```{r}
 # Importing contree from CIPRES using IQ Tool
+group = c("Obre_Allele1", "Obre_Allele2", "Obre_Allele3", "Obre_Allele4", "AB164223_Obre")
 tree_2 <- ggtree(tree2, branch.length='none', layout='circular') +
   geom_tiplab(size = 1) +
   ggtitle("Bootstrap tree - Comparing DQB Alleles of Irrawaddy dolphins to 
                        DQB Alleles of cetaceans") +
-  geom_treescale()
+  geom_treescale() 
   
-
 tree_2
 ```
 
@@ -104,7 +104,7 @@ tree_3 <- ggtree(tree3, branch.length='none', layout='circular') +
 tree_3
 ```
 
-## Using ape
+## Using ape package
 ```{r}
 # Load the 'ape' package 
 library(ape)
