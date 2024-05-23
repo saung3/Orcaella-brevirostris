@@ -125,6 +125,62 @@ plot(tree, tip.color = ifelse(tree$tip.label %in% highlight_labels, "red", "blac
 
 ```
 
+## References
+
+Bezuijen, M.R., Zanre, R., Goichot, M. 2007. The Don Sahong Dam and the Irrawaddy dolphin. WWF Greater Mekong Programme, Vientiane
+
+Beasley, I., Chooruk, S., and Piwpong, N. 2002. THE STATUS OF THE IRRAWADDY DOLPHIN, ORCAELLA BREVIROSTRIS, IN SONGKHLA LAKE, SOUTHERN THAILAND. THE RAFFLES BULLETIN OF ZOOLOGY: Supplement No. 10: 75-83 
+
+Brownell, Jr. R. L., Reeves, R. R., Read A. J., Smith, B. D., Thomas, P. O., Ralls, K., Amano, M., Berggren, P., Chit, A. M., Collins, T., Currey, R., Dolar, M. L. L., Genov, T., Hobbs, R. C., Kreb, D., Marsh, H., Mei Z., Perrin, W. F., Phay, S. ...Wang, J. Y. 2019. Bycatch in gillnet fisheries threatens Critically Endangered small cetaceans and other aquatic megafauna. Endangered Species Reserach 40, 285-296. https://doi.org/10.3354/esr00994 
+
+Brownell Jr. R.L., Reeves RR, Thomas PO, Smith BD, Ryan GE. Dams threaten rare Mekong dolphins. Science. 2017 Feb 24;355(6327):805. doi: 10.1126/science.aam6406. Epub 2017 Feb 23. PMID: 28232545.
+
+Bolger AM, Lohse M, Usadel B. 2014 Trimmomatic: a flexible trimmer for Illumina sequence data. Bioinformatics 30, 2114-2120. (doi: 10.1093/bioinformatics/btu170)
+
+Budi, T., Piyapattanakorn, S., Kreb, D., Yuda, P., Ninwat, S., Hardwises, P., Prachamkhai, P., Senanan, W., Thongsukdee, S., Phavaphutanon, J., and Klinsawat, W. 2022. Mitogenomes provide insight into complex evolutionary history of freshwater and coastal Irrawaddy dolphin Orcaella brevirostris Gray, 1966) in Thailand and Indonesia. Agriculture and Natural Resources 56, 591-606. https://doi.org/10.34044/j.anres.2022.56.3.15 
+
+Caballero, S., Heimeier, D., Trujillo, F., Vianna, J.A., B-Garrido., Montiel, M.J., Pedereros, S. V., 
+Marmontel, M., De. O. Santos, M.C., Santos, F.R., and Baker, C.S. 2010. Initial description of Major Histocompatibility Complex variation at two class II loci (DQA-DQB) in Sotalia fluviatilis and Sotalia guianensis. LAJAM 8(1-2): 81-95. e-ISSN 2236-1057
+
+Cerretero, S.A., Kapli, P., and Yang, Z. 2023. Beginner’s Guide on the Use of PAML to Detect Positive Selection. Mol. Biol. Evol. 40(4):msad041. https://doi.org/10.1093/molbev/msad041 
+
+Dabney J & Meyer M. 2019. Extraction of highly degraded DNA from ancient bones and teeth. In B. Shapiro, A. Barlow, P. Heintzman, M. Hofreiter, J. Paijmans, & A. Soares (Eds.), Ancient DNA, Methods in Molecular Biology vol. 1963, pp. 25-29. Humana Press. https://doi.org/10.1007/978-1-4939-9176-1_4
+
+Dai, Y., Chantra, R., Kittiwattanawong, K., Zhao, L., Sakornwimon, W., Aierken. R., Wu, F., and Wang, X. 2021. Genetic structure of the endangered Irrawaddy dolphin (Orcaella brevirostris) in the Gulf of Thailand. Genetics and Molecular Biology 44, e20200365. https://doi.org/10.1590/1678-4685-GMB-2020-0365 
+
+Frankham, R. 1995. Conservation Genetics. Annu. Rev. Genet. 29(1):305–327
+IUCN–SSC Cetacean Specialist Group, “Mekong River Irrawaddy dolphins.”. 2021. https://iucn-csg.org/mekong-dolphins/
+
+Hamner, R.M., Pichler, F.B., Heimeier, D., Constantine, R., and Scott, B. C. 2012.  Genetic differentiation and limited gene flow among fragmented populations of New Zealand endemic Hector’s and Maui’s dolphins. Conserv Genet 13, 987–1002. 
+https://doi.org/10.1007/s10592-012-0347-9
+
+Hayashi, K., Nishida, S., Yoshida, H., Goto, M., Pastene, L.A., and Koike, H. 2003. Sequence variation of the DQB allele in the cetacean MHC. Mammal Study 28: 89–96. DOI: 10.3106/mammalstudy.28.89 
+
+Hughes, A.L., and Hughes, M.K. 1995. Natural Selection of the peptide binding regions of major histocompatibility complex molecules. Immunogenetics 42: 233-243. 
+
+Jackson-Ricketts, J., Ruiz-Cooley, R. I., Junchompoo, C., Thongsukdee, S., Intongkham, A., Ninwat, S., Kittiwattanawong, K., Hines, E. M., & Costa, D. P. (2019). Ontogenetic variation in diet and habitat of Irrawaddy dolphins (Orcaella brevirostris) in the Gulf of Thailand and Andaman Sea. Marine Mammal Science 35, 492-521. https://doi.org/10.111/mms.12547 
+
+Miller, M.A., Pfeiffer, W., and Schwartz, T. 2011. The CIPRES science gateway: a community resource for phylogenetic analyses. Association for Computing Machinery, New York, NY, USA, Article 41, 1-8. https://doi.org/10.1145/2016741.2016785
+
+Minton G, Smith BD, Braulik GT, Kreb D, Sutaria D and Reeves R. 2017. Orcaella brevirostris (errata version published in 2018), The IUCN Red List of Threatened Species, https:// www.iucnredlist.org/species/15419/12379085
+
+Moreno-Santillán, D.D., Lacey, E.A., Gendron,, D., and Ortega, J. 2016. Genetic Variation at Exon of the MHC Class II DQB Locus in Blue Whale (Balaenoptera musculus) from the Gulf of California. PLoS ONE 11(1): e0141296. doi:10.1371/journal. pone.0141296
+
+Murphy, P.T., Irvine, K.N., Sampson, M., Guo, J., and Parr T.  2007. Mercury contamination along the Mekong River, Cambodia. Asian Journal of Water, Environment and Pollution. 6(1): 1–9
+
+Nei, M., and Gojobori, T. 1986. Simple methods for estimating the numbers of synonymous and nonsynonymous nucleotide substitutions. Molecular Biology and Evolution 3:418-426.
+
+Schnitzler, J.G., Das, K., Wohlsein, P., Kuiken, T., Ludwig, A., Lieckfeldt, D., Phan, C., Phay, S., and Siebert, S. 2021. The Irrawaddy dolphin (Orcaella brevirostris) from the Mekong river Cambodia: Preliminary health and toxicological investigations. Aquatic Toxicol., 234. https://doi.org/10.1016/j.aquatox.2021.105812
+
+Sommer, S. 2005. The importance of immune gene variability (MHC) in evolutionary ecology and conservation. Front Zool. doi: 10.1186/1742-9994-2-16 PMID: 16242022
+
+Thomas, P. O., Gulland, F. M. D., Reeves, R. R., Kreb, D., Ding, W., Smith, B., Malik, M. I., Ryan, G. E., & Phay, S. 2019. Electrofishing as a potential threat to freshwater cetaceans. Endangered Species Research 39, 207-220. https://doi.org/10.3354/esr00962
+
+Tamura, K., Stecher, G., and Kumar, S. 2021. MEGA 11: Molecular Evolutionary Genetics Analysis Version 11. Molecular Biology and Evolution https://doi.org/10.1093/molbev/msab120.
+
+Stecher, G., Tamura K., and Kumar, S. 2020. Molecular Evolutionary Genetics Analysis (MEGA) for macOS. Molecular Biology and Evolution 37:1237-1239.
+
+
 
 
 
