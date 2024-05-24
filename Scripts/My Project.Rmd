@@ -37,7 +37,7 @@ Alternative hypothesis: There is a relationship between the MHCIIDQB Alleles of 
 
 Methods: To analyze the relationship of the DQB alleles with few other cetaceans, we will compile Cetacean MHCII DQB sequences from GenBank and align them to the DQB alleles from Irrawaddy dolphin and input the phylogenetic tree from IQ Tool-CIPRES using R to make the tree better. The data from this approach will help us visualize which group of cetaceans has high similarity with the DQB alleles of Irrawaddy dolphins. This information can clarify more about the maintenance of high variability of MHC genes over time. 
 
-The data and script is stored in github repository https://github.com/saung3/Orcaella-brevirostris/tree/main/Scripts. 
+The data and script is stored in github repository https://github.com/saung3/Orcaella-brevirostris. 
 
 ## Using ggtree
 ```{r}
