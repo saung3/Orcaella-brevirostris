@@ -160,6 +160,7 @@ tree_gg_3 +
   geom_treescale()
 ```
 
+Overall the tree outputs show different result. The NJ Tree shows that Allele 1,3,4 shares the same clade along with the allele found from Hayashi et al. 2008. Bootstrap tree and maximum likelihood shows that Allele 1, 3 shares the same clade with the allele found from previous research and Allele 2,4 shares the same clade. Both the bootstrap and maximum likelihood tree shows that there is trans-species polymorphism for MHCIIDQB alleles since the alleles of the same species are not cluster together but in separate clade. Therefore the results indicates the alternative hypothesis. 
 
 ## Using ape package
 ```{r}
